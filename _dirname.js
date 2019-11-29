@@ -1,0 +1,1 @@
+exports.projectRoot = __dirname;
