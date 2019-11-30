@@ -94,7 +94,31 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar App = function () { return react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"h1\", null, \"Hello from react. 3\"); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n\n//# sourceURL=webpack:///./app/src/App.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ \"./app/src/Header/index.tsx\");\n\n\nvar App = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Header__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null)); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n\n//# sourceURL=webpack:///./app/src/App.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/Header/index.tsx":
+/*!**********************************!*\
+  !*** ./app/src/Header/index.tsx ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logo */ \"./app/src/Header/logo/index.tsx\");\n\n\nvar Header = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_logo__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Header);\n\n\n//# sourceURL=webpack:///./app/src/Header/index.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/Header/logo/index.tsx":
+/*!***************************************!*\
+  !*** ./app/src/Header/logo/index.tsx ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar HeaderLogo = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"a\", { href: \"/\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"img\", { src: \"/assets/images/logo.png\", width: \"280\", height: \"auto\" }))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (HeaderLogo);\n\n\n//# sourceURL=webpack:///./app/src/Header/logo/index.tsx?");
 
 /***/ }),
 
