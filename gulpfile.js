@@ -4,7 +4,7 @@ const sass = require('gulp-sass');
 // compile-sass
 const compileSass = () => {
   return (
-    src('app/src/scss/index.scss')
+    src('app/scss/index.scss')
     .pipe(
       sass({outputStyle: 'expanded'})
       .on('error', sass.logError)
@@ -14,6 +14,6 @@ const compileSass = () => {
 }
 
 // watch
-const watchFiles = () => watch(['app/src/scss/*.scss'], compileSass);
+const watchFiles = () => watch(['app/scss/**/*'], compileSass);
 
 exports.default = watchFiles;

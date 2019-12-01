@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ \"./app/src/Header/index.tsx\");\n\n\nvar App = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Header__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null)); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n\n//# sourceURL=webpack:///./app/src/App.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ \"./app/src/Header/index.tsx\");\n/* harmony import */ var _Sidebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Sidebar */ \"./app/src/Sidebar/index.tsx\");\n/* harmony import */ var _Screen__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Screen */ \"./app/src/Screen/index.tsx\");\n\n\n\n\nvar App = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"wrapper\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Header__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"contentWrapper\" },\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Sidebar__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Screen__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null)))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n\n//# sourceURL=webpack:///./app/src/App.tsx?");
 
 /***/ }),
 
@@ -106,7 +106,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logo */ \"./app/src/Header/logo/index.tsx\");\n\n\nvar Header = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_logo__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Header);\n\n\n//# sourceURL=webpack:///./app/src/Header/index.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logo */ \"./app/src/Header/logo/index.tsx\");\n/* harmony import */ var _link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./link */ \"./app/src/Header/link/index.tsx\");\n\n\n\nvar Header = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_logo__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header__content\" },\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_link__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { label: \"Add object\" }),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_link__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { label: \"Add light\" }),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_link__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { label: \"Add camera\" })))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Header);\n\n\n//# sourceURL=webpack:///./app/src/Header/index.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/Header/link/index.tsx":
+/*!***************************************!*\
+  !*** ./app/src/Header/link/index.tsx ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n;\nvar Link = function (prop) { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header__content__link\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"a\", null, prop.label))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Link);\n\n\n//# sourceURL=webpack:///./app/src/Header/link/index.tsx?");
 
 /***/ }),
 
@@ -118,7 +130,43 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar HeaderLogo = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"a\", { href: \"/\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"img\", { src: \"/assets/images/logo.png\", width: \"280\", height: \"auto\" }))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (HeaderLogo);\n\n\n//# sourceURL=webpack:///./app/src/Header/logo/index.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar HeaderLogo = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"a\", { href: \"/\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"img\", { className: \"header__logo__img\", src: \"/assets/images/logo.png\" }))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (HeaderLogo);\n\n\n//# sourceURL=webpack:///./app/src/Header/logo/index.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/Screen/index.tsx":
+/*!**********************************!*\
+  !*** ./app/src/Screen/index.tsx ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar Screen = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"screen\" })); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Screen);\n\n\n//# sourceURL=webpack:///./app/src/Screen/index.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/Sidebar/Showcase/index.tsx":
+/*!********************************************!*\
+  !*** ./app/src/Sidebar/Showcase/index.tsx ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar Showcase = function (props) { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"showcase\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"showcase__title\" }, props.type),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"showcase__box\" }))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Showcase);\n\n\n//# sourceURL=webpack:///./app/src/Sidebar/Showcase/index.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/Sidebar/index.tsx":
+/*!***********************************!*\
+  !*** ./app/src/Sidebar/index.tsx ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Showcase__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Showcase */ \"./app/src/Sidebar/Showcase/index.tsx\");\n\n\nvar Sidebar = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"sidebar\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Showcase__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { type: \"Objects\" }),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Showcase__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { type: \"Lights\" }),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Showcase__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { type: \"Cameras\" }))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Sidebar);\n\n\n//# sourceURL=webpack:///./app/src/Sidebar/index.tsx?");
 
 /***/ }),
 
