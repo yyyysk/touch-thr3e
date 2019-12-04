@@ -2,6 +2,7 @@ import * as React from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import Screen from './Screen';
+import Modal from './components/Modal';
 
 const App: React.FC = () => (
   <div className="wrapper">
@@ -9,6 +10,7 @@ const App: React.FC = () => (
     <div className="contentWrapper">
       <Sidebar />
       <Screen />
+      {/* <Modal displayFlag={true} /> */}
     </div>
   </div>
 );

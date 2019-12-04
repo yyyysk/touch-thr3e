@@ -1,4 +1,6 @@
 .screen {
-  // width: 100%;
+  // width: 900px;
+  flex-grow: 3;
+  min-height: 600px;
   background: $gray;
 }
