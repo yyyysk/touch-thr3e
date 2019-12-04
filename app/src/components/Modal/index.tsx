@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 type modalProps = {
-  displayFlag: boolean;
+  // displayFlag: boolean;
 };
 
 const Modal: React.FC<modalProps> = (props: modalProps) => {
-  if (!props.displayFlag) return;
+  // if (!props.displayFlag) return;
 
   return (
     <div className="modalContainer">
