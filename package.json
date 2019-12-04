@@ -19,12 +19,20 @@
   "scripts": {
     "start": "ts-node server/src/bin/www.ts & webpack -w & yarn -s run gulp",
     "build": "webpack",
-    "watch": "webpack -w"
+    "watch": "webpack -w",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.10.3",
     "@types/express": "^4.17.2",
+    "@types/jest": "^24.0.23",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.3",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
     "ts-loader": "^6.2.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
