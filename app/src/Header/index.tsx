@@ -1,6 +1,7 @@
 import * as React from 'react';
 import HeaderLogo from './logo';
 import HeaderLink from './link';
+import HeaderIcon from './icon';
 
 const Header: React.FC = () => (
   <div className="header">
@@ -10,6 +11,7 @@ const Header: React.FC = () => (
       <HeaderLink label="Add light" />
       <HeaderLink label="Add camera" />
     </div>
+    <HeaderIcon />
   </div>
 );
 

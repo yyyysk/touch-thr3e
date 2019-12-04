@@ -98,6 +98,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 /***/ }),
 
+/***/ "./app/src/Header/icon/index.tsx":
+/*!***************************************!*\
+  !*** ./app/src/Header/icon/index.tsx ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar HeaderIcon = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header__content__icon\" })); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (HeaderIcon);\n\n\n//# sourceURL=webpack:///./app/src/Header/icon/index.tsx?");
+
+/***/ }),
+
 /***/ "./app/src/Header/index.tsx":
 /*!**********************************!*\
   !*** ./app/src/Header/index.tsx ***!
@@ -106,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logo */ \"./app/src/Header/logo/index.tsx\");\n/* harmony import */ var _link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./link */ \"./app/src/Header/link/index.tsx\");\n\n\n\nvar Header = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_logo__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header__content\" },\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_link__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { label: \"Add object\" }),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_link__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { label: \"Add light\" }),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_link__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { label: \"Add camera\" })))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Header);\n\n\n//# sourceURL=webpack:///./app/src/Header/index.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logo */ \"./app/src/Header/logo/index.tsx\");\n/* harmony import */ var _link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./link */ \"./app/src/Header/link/index.tsx\");\n/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./icon */ \"./app/src/Header/icon/index.tsx\");\n\n\n\n\nvar Header = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_logo__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header__content\" },\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_link__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { label: \"Add object\" }),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_link__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { label: \"Add light\" }),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_link__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { label: \"Add camera\" })),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_icon__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Header);\n\n\n//# sourceURL=webpack:///./app/src/Header/index.tsx?");
 
 /***/ }),
 
@@ -146,6 +158,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 /***/ }),
 
+/***/ "./app/src/Sidebar/DownloadLink/index.tsx":
+/*!************************************************!*\
+  !*** ./app/src/Sidebar/DownloadLink/index.tsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar DownloadLink = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"sidebar__dlLink\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"a\", null, \"Download source code\"))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (DownloadLink);\n\n\n//# sourceURL=webpack:///./app/src/Sidebar/DownloadLink/index.tsx?");
+
+/***/ }),
+
 /***/ "./app/src/Sidebar/Showcase/index.tsx":
 /*!********************************************!*\
   !*** ./app/src/Sidebar/Showcase/index.tsx ***!
@@ -154,7 +178,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar Showcase = function (props) { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"showcase\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"showcase__title\" }, props.type),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"showcase__box\" }))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Showcase);\n\n\n//# sourceURL=webpack:///./app/src/Sidebar/Showcase/index.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ShowcaseIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ShowcaseIcon */ \"./app/src/Sidebar/ShowcaseIcon/index.tsx\");\n\n\nvar Showcase = function (props) {\n    var iconName;\n    switch (props.type) {\n        case 'Objects':\n            iconName = 'object-icon';\n            break;\n        case 'Lights':\n            iconName = 'light-icon';\n            break;\n        case 'Cameras':\n            iconName = 'camera-icon';\n            break;\n    }\n    return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"showcase\" },\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"showcase__title\" }, props.type),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"showcase__box\" },\n            react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_ShowcaseIcon__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { imgName: iconName }))));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Showcase);\n\n\n//# sourceURL=webpack:///./app/src/Sidebar/Showcase/index.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/Sidebar/ShowcaseIcon/index.tsx":
+/*!************************************************!*\
+  !*** ./app/src/Sidebar/ShowcaseIcon/index.tsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar ShowcaseIcon = function (props) { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"img\", { className: \"showcase__icon\", src: \"/assets/images/\" + props.imgName + \".png\" })); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (ShowcaseIcon);\n\n\n//# sourceURL=webpack:///./app/src/Sidebar/ShowcaseIcon/index.tsx?");
 
 /***/ }),
 
@@ -166,7 +202,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Showcase__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Showcase */ \"./app/src/Sidebar/Showcase/index.tsx\");\n\n\nvar Sidebar = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"sidebar\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Showcase__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { type: \"Objects\" }),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Showcase__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { type: \"Lights\" }),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Showcase__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { type: \"Cameras\" }))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Sidebar);\n\n\n//# sourceURL=webpack:///./app/src/Sidebar/index.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Showcase__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Showcase */ \"./app/src/Sidebar/Showcase/index.tsx\");\n/* harmony import */ var _DownloadLink__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DownloadLink */ \"./app/src/Sidebar/DownloadLink/index.tsx\");\n\n\n\nvar Sidebar = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"sidebar\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Showcase__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { type: \"Objects\" }),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Showcase__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { type: \"Lights\" }),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Showcase__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { type: \"Cameras\" }),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_DownloadLink__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Sidebar);\n\n\n//# sourceURL=webpack:///./app/src/Sidebar/index.tsx?");
 
 /***/ }),
 
