@@ -1,6 +1,5 @@
 .screen {
-  // width: 900px;
-  flex-grow: 3;
+  grid-column-start: 2;
   min-height: 600px;
-  background: $gray;
+  background: $gray
 }

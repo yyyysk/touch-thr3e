@@ -8,13 +8,11 @@ import Modal from './Modal';
 
 
 const App: React.FC = () => (
-  <div className="wrapper">
+  <>
     <Header />
-    <div className="contentWrapper">
-      <Sidebar />
-      <Screen />
-    </div>
-  </div>
+    <Sidebar />
+    <Screen />
+  </>
 );
 
 

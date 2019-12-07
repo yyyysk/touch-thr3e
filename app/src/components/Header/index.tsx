@@ -13,6 +13,7 @@ const Header = ({ modalOpenFlag, modalType, openModal}) => {
         <HeaderLink label="Add light"  onClick={ openModal } />
         <HeaderLink label="Add camera" onClick={ openModal } />
       </div>
+      <div className="margin--300"></div>
       <HeaderIcon />
     </div>
   );
