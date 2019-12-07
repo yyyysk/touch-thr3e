@@ -86,135 +86,159 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./app/src/App.tsx":
-/*!*************************!*\
-  !*** ./app/src/App.tsx ***!
-  \*************************/
-/*! exports provided: default */
+/***/ "./app/src/actions/actionTypes.ts":
+/*!****************************************!*\
+  !*** ./app/src/actions/actionTypes.ts ***!
+  \****************************************/
+/*! exports provided: OPEN_MODAL, CLOSE_MODAL */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ \"./app/src/Header/index.tsx\");\n/* harmony import */ var _Sidebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Sidebar */ \"./app/src/Sidebar/index.tsx\");\n/* harmony import */ var _Screen__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Screen */ \"./app/src/Screen/index.tsx\");\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n\n\n\n\n// interface OwnProps {\n//   modalHandler: any;\n//   actions: any;\n// }\n// type props = OwnProps;\nvar App = /** @class */ (function (_super) {\n    __extends(App, _super);\n    function App() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    App.prototype.render = function () {\n        // const modalHandler = this.props.modalHandler;\n        return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"wrapper\" },\n            react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Header__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null),\n            react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"contentWrapper\" },\n                react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Sidebar__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null),\n                react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Screen__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null))));\n    };\n    return App;\n}(react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"]));\n// const App: React.FC = () => (\n//   <div className=\"wrapper\">\n//     <Header />\n//     <div className=\"contentWrapper\">\n//       <Sidebar />\n//       <Screen />\n//       {/* <Modal displayFlag={true} /> */}\n//     </div>\n//   </div>\n// );\n// const mapState = (state, ownProps) => ({\n//   modalHandler: state.modalHandler,\n// });\n// export default connect(mapState, {})(App);\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n\n//# sourceURL=webpack:///./app/src/App.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"OPEN_MODAL\", function() { return OPEN_MODAL; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"CLOSE_MODAL\", function() { return CLOSE_MODAL; });\n/**\n * モーダルを開くアクションタイプ\n */\nvar OPEN_MODAL = 'OPEN_MODAL';\n/**\n * モーダルを閉じるアクションタイプ\n */\nvar CLOSE_MODAL = 'CLOSE_MODAL';\n\n\n//# sourceURL=webpack:///./app/src/actions/actionTypes.ts?");
 
 /***/ }),
 
-/***/ "./app/src/Header/icon/index.tsx":
-/*!***************************************!*\
-  !*** ./app/src/Header/icon/index.tsx ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar HeaderIcon = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header__content__icon\" })); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (HeaderIcon);\n\n\n//# sourceURL=webpack:///./app/src/Header/icon/index.tsx?");
-
-/***/ }),
-
-/***/ "./app/src/Header/index.tsx":
-/*!**********************************!*\
-  !*** ./app/src/Header/index.tsx ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../actions */ \"./app/src/actions/index.ts\");\n/* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./logo */ \"./app/src/Header/logo/index.tsx\");\n/* harmony import */ var _link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./link */ \"./app/src/Header/link/index.tsx\");\n/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./icon */ \"./app/src/Header/icon/index.tsx\");\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n\n\n\n\n\n\n\nvar Header = /** @class */ (function (_super) {\n    __extends(Header, _super);\n    function Header() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    Header.prototype.render = function () {\n        var _a = this.props, modalHandler = _a.modalHandler, actions = _a.actions;\n        return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header\" },\n            react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_logo__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null),\n            react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header__content\" },\n                react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_link__WEBPACK_IMPORTED_MODULE_5__[\"default\"], { label: \"Add object\", onClick: actions.openModal }),\n                react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_link__WEBPACK_IMPORTED_MODULE_5__[\"default\"], { label: \"Add light\", onClick: actions.openModal }),\n                react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_link__WEBPACK_IMPORTED_MODULE_5__[\"default\"], { label: \"Add camera\", onClick: actions.openModal })),\n            react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_icon__WEBPACK_IMPORTED_MODULE_6__[\"default\"], null)));\n    };\n    return Header;\n}(react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"]));\nvar mapState = function (state, ownProps) { return ({\n    modalHandler: state.modalHandler,\n}); };\nvar mapDispatch = function (dispatch) { return ({\n    actions: Object(redux__WEBPACK_IMPORTED_MODULE_2__[\"bindActionCreators\"])(_actions__WEBPACK_IMPORTED_MODULE_3__, dispatch),\n}); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__[\"connect\"])(mapState, mapDispatch)(Header));\n\n\n//# sourceURL=webpack:///./app/src/Header/index.tsx?");
-
-/***/ }),
-
-/***/ "./app/src/Header/link/index.tsx":
-/*!***************************************!*\
-  !*** ./app/src/Header/link/index.tsx ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n;\nvar Link = function (props) {\n    console.log(props);\n    return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header__content__link\" },\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"a\", { onClick: props.onClick }, props.label)));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Link);\n\n\n//# sourceURL=webpack:///./app/src/Header/link/index.tsx?");
-
-/***/ }),
-
-/***/ "./app/src/Header/logo/index.tsx":
-/*!***************************************!*\
-  !*** ./app/src/Header/logo/index.tsx ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar HeaderLogo = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"a\", { href: \"/\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"img\", { className: \"header__logo__img\", src: \"/assets/images/logo.png\" }))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (HeaderLogo);\n\n\n//# sourceURL=webpack:///./app/src/Header/logo/index.tsx?");
-
-/***/ }),
-
-/***/ "./app/src/Screen/index.tsx":
-/*!**********************************!*\
-  !*** ./app/src/Screen/index.tsx ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar Screen = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"screen\" })); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Screen);\n\n\n//# sourceURL=webpack:///./app/src/Screen/index.tsx?");
-
-/***/ }),
-
-/***/ "./app/src/Sidebar/DownloadLink/index.tsx":
-/*!************************************************!*\
-  !*** ./app/src/Sidebar/DownloadLink/index.tsx ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar DownloadLink = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"sidebar__dlLink\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"a\", null, \"Download source code\"))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (DownloadLink);\n\n\n//# sourceURL=webpack:///./app/src/Sidebar/DownloadLink/index.tsx?");
-
-/***/ }),
-
-/***/ "./app/src/Sidebar/Showcase/index.tsx":
-/*!********************************************!*\
-  !*** ./app/src/Sidebar/Showcase/index.tsx ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ShowcaseIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ShowcaseIcon */ \"./app/src/Sidebar/ShowcaseIcon/index.tsx\");\n\n\nvar Showcase = function (props) {\n    var iconName;\n    switch (props.type) {\n        case 'Objects':\n            iconName = 'object-icon';\n            break;\n        case 'Lights':\n            iconName = 'light-icon';\n            break;\n        case 'Cameras':\n            iconName = 'camera-icon';\n            break;\n    }\n    return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"showcase\" },\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"showcase__title\" }, props.type),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"showcase__box\" },\n            react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_ShowcaseIcon__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { imgName: iconName }))));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Showcase);\n\n\n//# sourceURL=webpack:///./app/src/Sidebar/Showcase/index.tsx?");
-
-/***/ }),
-
-/***/ "./app/src/Sidebar/ShowcaseIcon/index.tsx":
-/*!************************************************!*\
-  !*** ./app/src/Sidebar/ShowcaseIcon/index.tsx ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar ShowcaseIcon = function (props) { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"img\", { className: \"showcase__icon\", src: \"/assets/images/\" + props.imgName + \".png\" })); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (ShowcaseIcon);\n\n\n//# sourceURL=webpack:///./app/src/Sidebar/ShowcaseIcon/index.tsx?");
-
-/***/ }),
-
-/***/ "./app/src/Sidebar/index.tsx":
+/***/ "./app/src/actions/modals.ts":
 /*!***********************************!*\
-  !*** ./app/src/Sidebar/index.tsx ***!
+  !*** ./app/src/actions/modals.ts ***!
   \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Showcase__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Showcase */ \"./app/src/Sidebar/Showcase/index.tsx\");\n/* harmony import */ var _DownloadLink__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DownloadLink */ \"./app/src/Sidebar/DownloadLink/index.tsx\");\n\n\n\nvar Sidebar = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"sidebar\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Showcase__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { type: \"Objects\" }),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Showcase__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { type: \"Lights\" }),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Showcase__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { type: \"Cameras\" }),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_DownloadLink__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Sidebar);\n\n\n//# sourceURL=webpack:///./app/src/Sidebar/index.tsx?");
-
-/***/ }),
-
-/***/ "./app/src/actions/index.ts":
-/*!**********************************!*\
-  !*** ./app/src/actions/index.ts ***!
-  \**********************************/
 /*! exports provided: openModal, closeModal */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"openModal\", function() { return openModal; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"closeModal\", function() { return closeModal; });\n/* harmony import */ var _utils_actionTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/actionTypes */ \"./app/src/utils/actionTypes.ts\");\n\n/**\n * モーダルを開くアクション\n */\nvar openModal = function () { type: _utils_actionTypes__WEBPACK_IMPORTED_MODULE_0__[\"OPEN_MODAL\"]; };\n/**\n * モーダルを閉じるアクション\n */\nvar closeModal = function () { type: _utils_actionTypes__WEBPACK_IMPORTED_MODULE_0__[\"CLOSE_MODAL\"]; };\n\n\n//# sourceURL=webpack:///./app/src/actions/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"openModal\", function() { return openModal; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"closeModal\", function() { return closeModal; });\n/* harmony import */ var _actionTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actionTypes */ \"./app/src/actions/actionTypes.ts\");\n\n/**\n * モーダルを開くアクション\n */\nvar openModal = function (modalOpenFlag, modalType) {\n    return ({\n        type: _actionTypes__WEBPACK_IMPORTED_MODULE_0__[\"OPEN_MODAL\"],\n        payload: {\n            modalOpenFlag: modalOpenFlag,\n            modalType: modalType\n        },\n    });\n};\n/**\n * モーダルを閉じるアクション\n */\nvar closeModal = function () { return ({\n    type: _actionTypes__WEBPACK_IMPORTED_MODULE_0__[\"CLOSE_MODAL\"],\n}); };\n\n\n//# sourceURL=webpack:///./app/src/actions/modals.ts?");
+
+/***/ }),
+
+/***/ "./app/src/components/App.tsx":
+/*!************************************!*\
+  !*** ./app/src/components/App.tsx ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _containers_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../containers/Header */ \"./app/src/containers/Header.ts\");\n/* harmony import */ var _Sidebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Sidebar */ \"./app/src/components/Sidebar/index.tsx\");\n/* harmony import */ var _Screen__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Screen */ \"./app/src/components/Screen/index.tsx\");\n\n\n\n\nvar App = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"wrapper\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_containers_Header__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"contentWrapper\" },\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Sidebar__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Screen__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null)))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n\n//# sourceURL=webpack:///./app/src/components/App.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/components/Header/icon/index.tsx":
+/*!**************************************************!*\
+  !*** ./app/src/components/Header/icon/index.tsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar HeaderIcon = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header__content__icon\" })); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (HeaderIcon);\n\n\n//# sourceURL=webpack:///./app/src/components/Header/icon/index.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/components/Header/index.tsx":
+/*!*********************************************!*\
+  !*** ./app/src/components/Header/index.tsx ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logo */ \"./app/src/components/Header/logo/index.tsx\");\n/* harmony import */ var _link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./link */ \"./app/src/components/Header/link/index.tsx\");\n/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./icon */ \"./app/src/components/Header/icon/index.tsx\");\n\n\n\n\nvar Header = function (_a) {\n    var modalOpenFlag = _a.modalOpenFlag, modalType = _a.modalType, openModal = _a.openModal;\n    return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header\" },\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_logo__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header__content\" },\n            react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_link__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { label: \"Add object\", onClick: openModal }),\n            react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_link__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { label: \"Add light\", onClick: openModal }),\n            react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_link__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { label: \"Add camera\", onClick: openModal })),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_icon__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null)));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Header);\n\n\n//# sourceURL=webpack:///./app/src/components/Header/index.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/components/Header/link/index.tsx":
+/*!**************************************************!*\
+  !*** ./app/src/components/Header/link/index.tsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n;\nvar Link = function (props) {\n    return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"header__content__link\" },\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"a\", { onClick: props.onClick }, props.label)));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Link);\n\n\n//# sourceURL=webpack:///./app/src/components/Header/link/index.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/components/Header/logo/index.tsx":
+/*!**************************************************!*\
+  !*** ./app/src/components/Header/logo/index.tsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar HeaderLogo = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"a\", { href: \"/\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"img\", { className: \"header__logo__img\", src: \"/assets/images/logo.png\" }))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (HeaderLogo);\n\n\n//# sourceURL=webpack:///./app/src/components/Header/logo/index.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/components/Screen/index.tsx":
+/*!*********************************************!*\
+  !*** ./app/src/components/Screen/index.tsx ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar Screen = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"screen\" })); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Screen);\n\n\n//# sourceURL=webpack:///./app/src/components/Screen/index.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/components/Sidebar/DownloadLink/index.tsx":
+/*!***********************************************************!*\
+  !*** ./app/src/components/Sidebar/DownloadLink/index.tsx ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar DownloadLink = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"sidebar__dlLink\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"a\", null, \"Download source code\"))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (DownloadLink);\n\n\n//# sourceURL=webpack:///./app/src/components/Sidebar/DownloadLink/index.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/components/Sidebar/Showcase/index.tsx":
+/*!*******************************************************!*\
+  !*** ./app/src/components/Sidebar/Showcase/index.tsx ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ShowcaseIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ShowcaseIcon */ \"./app/src/components/Sidebar/ShowcaseIcon/index.tsx\");\n\n\nvar Showcase = function (props) {\n    var iconName;\n    switch (props.type) {\n        case 'Objects':\n            iconName = 'object-icon';\n            break;\n        case 'Lights':\n            iconName = 'light-icon';\n            break;\n        case 'Cameras':\n            iconName = 'camera-icon';\n            break;\n    }\n    return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"showcase\" },\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"showcase__title\" }, props.type),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"showcase__box\" },\n            react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_ShowcaseIcon__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { imgName: iconName }))));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Showcase);\n\n\n//# sourceURL=webpack:///./app/src/components/Sidebar/Showcase/index.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/components/Sidebar/ShowcaseIcon/index.tsx":
+/*!***********************************************************!*\
+  !*** ./app/src/components/Sidebar/ShowcaseIcon/index.tsx ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar ShowcaseIcon = function (props) { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"img\", { className: \"showcase__icon\", src: \"/assets/images/\" + props.imgName + \".png\" })); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (ShowcaseIcon);\n\n\n//# sourceURL=webpack:///./app/src/components/Sidebar/ShowcaseIcon/index.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/components/Sidebar/index.tsx":
+/*!**********************************************!*\
+  !*** ./app/src/components/Sidebar/index.tsx ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Showcase__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Showcase */ \"./app/src/components/Sidebar/Showcase/index.tsx\");\n/* harmony import */ var _DownloadLink__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DownloadLink */ \"./app/src/components/Sidebar/DownloadLink/index.tsx\");\n\n\n\nvar Sidebar = function () { return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"sidebar\" },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Showcase__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { type: \"Objects\" }),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Showcase__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { type: \"Lights\" }),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Showcase__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { type: \"Cameras\" }),\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_DownloadLink__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null))); };\n/* harmony default export */ __webpack_exports__[\"default\"] = (Sidebar);\n\n\n//# sourceURL=webpack:///./app/src/components/Sidebar/index.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/containers/Header.ts":
+/*!**************************************!*\
+  !*** ./app/src/containers/Header.ts ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Header */ \"./app/src/components/Header/index.tsx\");\n/* harmony import */ var _actions_modals__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/modals */ \"./app/src/actions/modals.ts\");\n\n\n\nfunction mapStateToProps(_a) {\n    var modalOpenFlag = _a.modalOpenFlag, modalType = _a.modalType;\n    return {\n        modalOpenFlag: modalOpenFlag,\n        modalType: modalType,\n    };\n}\n/**\n * openModal() をHeaderで実行すると\n * Storeにdispatchされるようmap\n * @param dispatch\n */\nfunction mapDispatchToProps(dispatch) {\n    return {\n        openModal: function (modalOpenFlag, modalType) {\n            dispatch(Object(_actions_modals__WEBPACK_IMPORTED_MODULE_2__[\"openModal\"])(modalOpenFlag, modalType));\n        },\n    };\n}\n/**\n * HeaderコンポーネントとStoreを接続\n */\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__[\"connect\"])(mapStateToProps, mapDispatchToProps)(_components_Header__WEBPACK_IMPORTED_MODULE_1__[\"default\"]));\n\n\n//# sourceURL=webpack:///./app/src/containers/Header.ts?");
 
 /***/ }),
 
@@ -226,7 +250,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ \"./app/src/App.tsx\");\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./reducers */ \"./app/src/reducers/index.ts\");\n\n\n\n\n\n\nvar store = Object(redux__WEBPACK_IMPORTED_MODULE_3__[\"createStore\"])(_reducers__WEBPACK_IMPORTED_MODULE_5__[\"default\"]);\nreact_dom__WEBPACK_IMPORTED_MODULE_1__[\"render\"](react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](react_redux__WEBPACK_IMPORTED_MODULE_4__[\"Provider\"], { store: store },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_App__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null)), document.getElementById('app'));\n\n\n//# sourceURL=webpack:///./app/src/index.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _components_App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/App */ \"./app/src/components/App.tsx\");\n/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./store */ \"./app/src/store/index.ts\");\n\n\n\n\n\nreact_dom__WEBPACK_IMPORTED_MODULE_1__[\"render\"](react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](react_redux__WEBPACK_IMPORTED_MODULE_2__[\"Provider\"], { store: _store__WEBPACK_IMPORTED_MODULE_4__[\"default\"] },\n    react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_components_App__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null)), document.getElementById('app'));\n\n\n//# sourceURL=webpack:///./app/src/index.tsx?");
 
 /***/ }),
 
@@ -238,7 +262,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var _modalHandler__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modalHandler */ \"./app/src/reducers/modalHandler.ts\");\n\n\nvar reducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"combineReducers\"])({\n    modalHandler: _modalHandler__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (reducer);\n\n\n//# sourceURL=webpack:///./app/src/reducers/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modalHandler__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modalHandler */ \"./app/src/reducers/modalHandler.ts\");\n\n// const reducer = combineReducers({\n//   modalHandler,\n// });\nvar reducer = _modalHandler__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n/* harmony default export */ __webpack_exports__[\"default\"] = (reducer);\n\n\n//# sourceURL=webpack:///./app/src/reducers/index.ts?");
 
 /***/ }),
 
@@ -250,19 +274,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redu
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_actionTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/actionTypes */ \"./app/src/utils/actionTypes.ts\");\nvar __assign = (undefined && undefined.__assign) || function () {\n    __assign = Object.assign || function(t) {\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\n            s = arguments[i];\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n                t[p] = s[p];\n        }\n        return t;\n    };\n    return __assign.apply(this, arguments);\n};\n\nvar initialModalState = {\n    openFlag: false,\n    modalType: '',\n};\nvar modalHandler = function (state, action) {\n    if (state === void 0) { state = initialModalState; }\n    // タイプを指定して、モーダルを開く\n    if (action.type === _utils_actionTypes__WEBPACK_IMPORTED_MODULE_0__[\"OPEN_MODAL\"]) {\n        return __assign(__assign({}, state), { openFlag: true });\n    }\n    // モーダルを閉じる\n    else if (action.type === _utils_actionTypes__WEBPACK_IMPORTED_MODULE_0__[\"CLOSE_MODAL\"]) {\n        return __assign(__assign({}, state), { openFlag: false });\n    }\n    // ...\n    else {\n        return state;\n    }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (modalHandler);\n\n\n//# sourceURL=webpack:///./app/src/reducers/modalHandler.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _actions_actionTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/actionTypes */ \"./app/src/actions/actionTypes.ts\");\nvar __assign = (undefined && undefined.__assign) || function () {\n    __assign = Object.assign || function(t) {\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\n            s = arguments[i];\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n                t[p] = s[p];\n        }\n        return t;\n    };\n    return __assign.apply(this, arguments);\n};\n\n// import * as modalTypes from '../utils/modalTypes';\n/**\n * 初期state\n */\nvar initialModalState = {\n    modalOpenFlag: false,\n    modalType: '',\n};\n/**\n * モーダルの状態を管理するreducer\n * @param state\n * @param action\n */\nvar modalHandler = function (state, action) {\n    if (state === void 0) { state = initialModalState; }\n    switch (action.type) {\n        // タイプを指定して、モーダルを開く\n        case _actions_actionTypes__WEBPACK_IMPORTED_MODULE_0__[\"OPEN_MODAL\"]:\n            return __assign(__assign({}, state), { modalOpenFlag: true });\n        // モーダルを閉じる\n        case _actions_actionTypes__WEBPACK_IMPORTED_MODULE_0__[\"CLOSE_MODAL\"]:\n            return __assign(__assign({}, state), { modalOpenFlag: false });\n        default:\n            return state;\n    }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (modalHandler);\n\n\n//# sourceURL=webpack:///./app/src/reducers/modalHandler.ts?");
 
 /***/ }),
 
-/***/ "./app/src/utils/actionTypes.ts":
-/*!**************************************!*\
-  !*** ./app/src/utils/actionTypes.ts ***!
-  \**************************************/
-/*! exports provided: OPEN_MODAL, CLOSE_MODAL */
+/***/ "./app/src/store/index.ts":
+/*!********************************!*\
+  !*** ./app/src/store/index.ts ***!
+  \********************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"OPEN_MODAL\", function() { return OPEN_MODAL; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"CLOSE_MODAL\", function() { return CLOSE_MODAL; });\n/**\n * モーダルを開くアクションタイプ\n */\nvar OPEN_MODAL = 'OPEN_MODAL';\n/**\n * モーダルを閉じるアクションタイプ\n */\nvar CLOSE_MODAL = 'CLOSE_MODAL';\n\n\n//# sourceURL=webpack:///./app/src/utils/actionTypes.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reducers */ \"./app/src/reducers/index.ts\");\n\n\nvar store = Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"createStore\"])(_reducers__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n/* harmony default export */ __webpack_exports__[\"default\"] = (store);\n\n\n//# sourceURL=webpack:///./app/src/store/index.ts?");
 
 /***/ }),
 
