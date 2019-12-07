@@ -1,4 +1,4 @@
 node_modules
 
-/public/assets/css
-/public/assets/js
+/public/assets/css/index.css
+/public/assets/js/index.js
