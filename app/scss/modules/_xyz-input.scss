@@ -1,0 +1,20 @@
+.xyz-input {
+  width: 550px;
+  margin: 30px auto;
+  font-size: 1rem;
+  
+  &__label {
+    color: #fff;
+
+    &--head {
+      color: #fff;
+      font-size: 1.2rem;
+    }
+  }
+
+  &Wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+}

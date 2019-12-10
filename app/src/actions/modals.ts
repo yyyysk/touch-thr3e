@@ -3,11 +3,11 @@ import * as actionTypes from './actionTypes';
 /**
  * モーダルを開くアクション
  */
-export const openModal = (modalOpenFlag, modalType) => {
+export const openModal = (modalType) => {
+
   return ({
     type: actionTypes.OPEN_MODAL,
     payload: {
-      modalOpenFlag,
       modalType
     },
   })
@@ -16,6 +16,9 @@ export const openModal = (modalOpenFlag, modalType) => {
 /**
  * モーダルを閉じるアクション
  */
-export const closeModal = () => ({
-  type: actionTypes.CLOSE_MODAL,
-});
+export const closeModal = () => {
+
+  return ({
+    type: actionTypes.CLOSE_MODAL,
+  })
+};

@@ -148,6 +148,7 @@ input, select {
 .header__content__icon {
   margin-right: 20px;
   width: 50px;
+  min-width: 50px;
   height: 50px;
   background: #fff;
   border-radius: 50px;
@@ -260,7 +261,105 @@ input, select {
 }
 
 .modal {
-  width: 700px;
-  height: 400px;
+  width: 800px;
+  height: 600px;
   background: #333333;
+}
+
+.modalContent {
+  position: relative;
+  padding: 10px;
+}
+
+.modalContent__title {
+  font-size: 1.6rem;
+  color: #01D8B2;
+  margin-left: 10px;
+}
+
+.modalContent__close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modalContent__close:hover {
+  opacity: 0.7;
+}
+
+.selectbox {
+  width: 550px;
+  position: relative;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  background: #ffffff;
+  margin-top: 10px;
+}
+
+.selectbox select {
+  width: 100%;
+  padding-right: 1.2rem;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 8px 38px 8px 8px;
+  color: #707070;
+}
+
+.selectbox::before {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #666666;
+  pointer-events: none;
+}
+
+.selectbox-title {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.selectbox-wrapper {
+  width: 551px;
+  margin: 30px auto;
+}
+
+.xyz-input {
+  width: 550px;
+  margin: 30px auto;
+  font-size: 1rem;
+}
+
+.xyz-input__label {
+  color: #fff;
+}
+
+.xyz-input__label--head {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.xyz-inputWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.objectEditor {
+  position: relative;
 }

@@ -1,5 +1,5 @@
 import * as actionTypes from '../actions/actionTypes';
-// import * as modalTypes from '../utils/modalTypes';
+
 
 /**
  * 初期state
@@ -21,6 +21,7 @@ const modalHandler = (state = initialModalState, action) => {
       return {
         ...state,
         modalOpenFlag: true,
+        modalType: action.payload.modalType
       };
 
     // モーダルを閉じる

@@ -17,8 +17,8 @@ function mapStateToProps({ modalOpenFlag, modalType }) {
  */
 function mapDispatchToProps(dispatch) {
   return {
-    openModal(modalOpenFlag, modalType) {
-      dispatch(openModal(modalOpenFlag, modalType));
+    openModal(modalType) {
+      dispatch(openModal(modalType));
     },
   };
 }
