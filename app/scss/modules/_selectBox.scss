@@ -1,0 +1,48 @@
+.selectbox {
+  width: 550px;
+  position: relative;
+	border: 1px solid #bbbbbb;
+	border-radius: 2px;
+  background: #ffffff;
+  margin-top: 10px;
+
+  select {
+    width: 100%;
+    padding-right: 1.2rem;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 8px 38px 8px 8px;
+	  color: $gray;
+  }
+  
+  &::before {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #666666;
+    pointer-events: none;
+  }
+
+  &-title {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
+  &-wrapper {
+    width: 551px;
+    margin: 30px auto;
+  }
+}

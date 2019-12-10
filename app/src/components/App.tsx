@@ -1,19 +1,25 @@
 import * as React from 'react';
 
 import Header from '../containers/Header';
+import Modal from '../containers/Modal';
 import Sidebar from './Sidebar';
 import Screen from './Screen';
-import Modal from './Modal';
 
 
+const App = ({ modalOpenFlag }) => {
+  
+  // Modal表示
+  const ModalElm = modalOpenFlag? <Modal /> : <></>;
 
-const App: React.FC = () => (
-  <>
-    <Header />
-    <Sidebar />
-    <Screen />
-  </>
-);
+  return(
+    <>
+      <Header />
+      <Sidebar />
+      <Screen />
+      { ModalElm }
+    </>
+  );
+};
 
 
 export default App;
