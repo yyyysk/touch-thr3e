@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import App from '../components/App';
 
-function mapStateToProps({ modalOpenFlag, }) {
+function mapStateToProps(state) {
   return {
-    modalOpenFlag,
+    modalOpenFlag: state.modalHandler.modalOpenFlag,
   };
 }
 
