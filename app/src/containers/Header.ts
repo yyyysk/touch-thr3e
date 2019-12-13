@@ -3,10 +3,11 @@ import Header from '../components/Header';
 import { openModal } from '../actions/modals';
 
 
-function mapStateToProps({ modalOpenFlag, modalType }) {
+function mapStateToProps(state) {
+
   return {
-    modalOpenFlag,
-    modalType,
+    modalOpenFlag: state.modalHandler.modalOpenFlag,
+    modalType: state.modalHandler.modalType,
   };
 }
 
@@ -16,6 +17,7 @@ function mapStateToProps({ modalOpenFlag, modalType }) {
  * @param dispatch 
  */
 function mapDispatchToProps(dispatch) {
+
   return {
     openModal(modalType) {
       dispatch(openModal(modalType));

@@ -3,9 +3,9 @@ import Modal from '../components/Modal';
 import { closeModal } from '../actions/modals';
 
 
-function mapStateToProps({ modalType }) {
+function mapStateToProps(state) {
   return {
-    modalType,
+    modalType: state.modalHandler.modalType,
   };
 }
 

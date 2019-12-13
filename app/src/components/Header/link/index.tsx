@@ -8,7 +8,7 @@ interface linkProps {
 const Link: React.FC<linkProps> = (props: linkProps) => {
   return(
   <div className="header__content__link">
-    <a onClick={ props.onClick }>{props.label}</a>
+    <a onClick={ props.onClick }>{ props.label }</a>
   </div>);
 };
 
