@@ -10,14 +10,21 @@ const ObjectEditor: React.FC = () => {
   const geometryOptions = ['Plane', 'Cube', 'Sphere'];
   const materialOptions = ['MeshBasic','MeshLambert', 'MeshPhong'];
 
+  const fetchSrc = () => {
+    fetch('/api/v1/get')
+      .then(() => console.log('ok'))
+  };
+
   return(
     <div className="objectEditor">
       <SelectBox label="Geometry" options={geometryOptions} />
       <SelectBox label="Material" options={materialOptions} />
       <XyzInput label="Position" type="position" />
       <XyzInput label="Rotation" type="rotation" />
-      <CancelButton label="Cancel" onClick={() => console.log('clicked cancel')} />
-      <PrimaryButton label="Save" onClick={() => console.log('clicked save')} /> 
+      <div className="objectEditor__actionWrapper">
+        <PrimaryButton label="Save" onClick={fetchSrc} />
+        <CancelButton label="Cancel" onClick={() => console.log('clicked cancel')} />
+      </div>
     </div>
   );
 };
