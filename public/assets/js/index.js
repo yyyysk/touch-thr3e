@@ -90,11 +90,11 @@
 /*!****************************************!*\
   !*** ./app/src/actions/actionTypes.ts ***!
   \****************************************/
-/*! exports provided: OPEN_MODAL, CLOSE_MODAL */
+/*! exports provided: OPEN_MODAL, CLOSE_MODAL, SET_SRC */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"OPEN_MODAL\", function() { return OPEN_MODAL; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"CLOSE_MODAL\", function() { return CLOSE_MODAL; });\n/**\n * モーダルを開くアクションタイプ\n */\nvar OPEN_MODAL = 'OPEN_MODAL';\n/**\n * モーダルを閉じるアクションタイプ\n */\nvar CLOSE_MODAL = 'CLOSE_MODAL';\n\n\n//# sourceURL=webpack:///./app/src/actions/actionTypes.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"OPEN_MODAL\", function() { return OPEN_MODAL; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"CLOSE_MODAL\", function() { return CLOSE_MODAL; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"SET_SRC\", function() { return SET_SRC; });\n/**\n * モーダルを開くアクションタイプ\n */\nvar OPEN_MODAL = 'OPEN_MODAL';\n/**\n * モーダルを閉じるアクションタイプ\n */\nvar CLOSE_MODAL = 'CLOSE_MODAL';\n/**\n * レンダーsrcの変更アクション\n */\nvar SET_SRC = 'SET_SRC';\n\n\n//# sourceURL=webpack:///./app/src/actions/actionTypes.ts?");
 
 /***/ }),
 
@@ -119,6 +119,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _containers_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../containers/Header */ \"./app/src/containers/Header.ts\");\n/* harmony import */ var _containers_Modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../containers/Modal */ \"./app/src/containers/Modal.ts\");\n/* harmony import */ var _Sidebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Sidebar */ \"./app/src/components/Sidebar/index.tsx\");\n/* harmony import */ var _Screen__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Screen */ \"./app/src/components/Screen/index.tsx\");\n\n\n\n\n\nvar App = function (_a) {\n    var modalOpenFlag = _a.modalOpenFlag;\n    // Modal表示\n    var ModalElm = modalOpenFlag ? react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_containers_Modal__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null) : react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](react__WEBPACK_IMPORTED_MODULE_0__[\"Fragment\"], null);\n    return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](react__WEBPACK_IMPORTED_MODULE_0__[\"Fragment\"], null,\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_containers_Header__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Sidebar__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_Screen__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null),\n        ModalElm));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n\n//# sourceURL=webpack:///./app/src/components/App.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/components/CancelButton/index.tsx":
+/*!***************************************************!*\
+  !*** ./app/src/components/CancelButton/index.tsx ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar CancelButton = function (props) {\n    return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"a\", { className: \"cancelButton\", onClick: props.onClick }, props.label));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (CancelButton);\n\n\n//# sourceURL=webpack:///./app/src/components/CancelButton/index.tsx?");
 
 /***/ }),
 
@@ -190,7 +202,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _SelectBox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../SelectBox */ \"./app/src/components/SelectBox/index.tsx\");\n/* harmony import */ var _xyzInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../xyzInput */ \"./app/src/components/xyzInput/index.tsx\");\n\n\n\nvar ObjectEditor = function () {\n    var geometryOptions = ['Plane', 'Cube', 'Sphere'];\n    var materialOptions = ['MeshBasic', 'MeshLambert', 'MeshPhong'];\n    return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"objectEditor\" },\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_SelectBox__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { label: \"Geometry\", options: geometryOptions }),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_SelectBox__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { label: \"Material\", options: materialOptions }),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_xyzInput__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { label: \"Position\", type: \"position\" }),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_xyzInput__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { label: \"Rotation\", type: \"rotation\" })));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (ObjectEditor);\n\n\n//# sourceURL=webpack:///./app/src/components/ObjectEditor/index.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _SelectBox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../SelectBox */ \"./app/src/components/SelectBox/index.tsx\");\n/* harmony import */ var _xyzInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../xyzInput */ \"./app/src/components/xyzInput/index.tsx\");\n/* harmony import */ var _PrimaryButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../PrimaryButton */ \"./app/src/components/PrimaryButton/index.tsx\");\n/* harmony import */ var _CancelButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../CancelButton */ \"./app/src/components/CancelButton/index.tsx\");\n\n\n\n\n\nvar ObjectEditor = function () {\n    var geometryOptions = ['Plane', 'Cube', 'Sphere'];\n    var materialOptions = ['MeshBasic', 'MeshLambert', 'MeshPhong'];\n    return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"objectEditor\" },\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_SelectBox__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { label: \"Geometry\", options: geometryOptions }),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_SelectBox__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { label: \"Material\", options: materialOptions }),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_xyzInput__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { label: \"Position\", type: \"position\" }),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_xyzInput__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { label: \"Rotation\", type: \"rotation\" }),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_CancelButton__WEBPACK_IMPORTED_MODULE_4__[\"default\"], { label: \"Cancel\", onClick: function () { return console.log('clicked cancel'); } }),\n        react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_PrimaryButton__WEBPACK_IMPORTED_MODULE_3__[\"default\"], { label: \"Save\", onClick: function () { return console.log('clicked save'); } })));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (ObjectEditor);\n\n\n//# sourceURL=webpack:///./app/src/components/ObjectEditor/index.tsx?");
+
+/***/ }),
+
+/***/ "./app/src/components/PrimaryButton/index.tsx":
+/*!****************************************************!*\
+  !*** ./app/src/components/PrimaryButton/index.tsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar PrimaryButton = function (props) {\n    return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"a\", { className: \"primaryButton\", onClick: props.onClick }, props.label));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (PrimaryButton);\n\n\n//# sourceURL=webpack:///./app/src/components/PrimaryButton/index.tsx?");
 
 /***/ }),
 
@@ -334,7 +358,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var _modalHandler__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modalHandler */ \"./app/src/reducers/modalHandler.ts\");\n\n\nvar reducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"combineReducers\"])({\n    modalHandler: _modalHandler__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n});\n// const reducer = modalHandler;\n/* harmony default export */ __webpack_exports__[\"default\"] = (reducer);\n\n\n//# sourceURL=webpack:///./app/src/reducers/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var _modalHandler__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modalHandler */ \"./app/src/reducers/modalHandler.ts\");\n\n\nvar reducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"combineReducers\"])({\n    modalHandler: _modalHandler__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (reducer);\n\n\n//# sourceURL=webpack:///./app/src/reducers/index.ts?");
 
 /***/ }),
 
