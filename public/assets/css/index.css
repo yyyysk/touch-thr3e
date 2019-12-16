@@ -363,3 +363,17 @@ input, select {
 .objectEditor {
   position: relative;
 }
+
+.primaryButton {
+  padding: 10px 40px;
+  background: #01D8B2;
+  color: #333333;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.primaryButton:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  background: #41fedd;
+}

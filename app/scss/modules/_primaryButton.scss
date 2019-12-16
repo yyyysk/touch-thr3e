@@ -1,0 +1,13 @@
+.primaryButton {
+  padding: 10px 40px;
+  background: $green;
+  color: $black;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    background: lighten($color: $green, $amount: 20);
+  }
+}

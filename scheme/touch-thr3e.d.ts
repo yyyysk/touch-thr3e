@@ -12,6 +12,7 @@ interface Store {
  * 
  */
 interface Touch3Object {
+  id: number;
   geometry: string;
   material: string;
   color: string;
@@ -31,6 +32,7 @@ interface Touch3Object {
  * 
  */
 interface Touch3Light {
+  id: number;
   type: string;
   color: string;
   decay: number;
@@ -50,6 +52,7 @@ interface Touch3Light {
  * 
  */
 interface Touch3Camera {
+  id: number;
   type: string;
   position: {
     x: number;
