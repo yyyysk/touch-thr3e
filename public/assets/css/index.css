@@ -364,6 +364,13 @@ input, select {
   position: relative;
 }
 
+.objectEditor__actionWrapper {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .primaryButton {
   padding: 10px 40px;
   background: #01D8B2;
@@ -376,4 +383,15 @@ input, select {
 .primaryButton:hover {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
   background: #41fedd;
+}
+
+.cancelButton {
+  color: #01D8B2;
+  font-size: 1rem;
+  margin: 0 50px;
+  cursor: pointer;
+}
+
+.cancelButton :hover {
+  color: #41fedd;
 }

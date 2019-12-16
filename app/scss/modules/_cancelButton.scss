@@ -1,0 +1,10 @@
+.cancelButton {
+  color: $green;
+  font-size: 1rem;
+  margin: 0 50px;
+  cursor: pointer;
+
+  :hover {
+    color: lighten($color: $green, $amount: 20);
+  }
+}
