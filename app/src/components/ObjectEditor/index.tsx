@@ -12,7 +12,7 @@ const ObjectEditor: React.FC = () => {
 
   const fetchSrc = () => {
     fetch('/api/v1/get')
-      .then(() => console.log('ok'))
+      .then((res) => console.log(res))
   };
 
   return(
