@@ -8,7 +8,7 @@ import {
   EDIT_CAMERA
 } from '../../utils/modalTypes';
 
-import ObjectEditor from '../ObjectEditor';
+import ObjectEditor from '../../containers/ObjectEditor';
 
 const Modal = ({ modalType, closeModal }) => {
 

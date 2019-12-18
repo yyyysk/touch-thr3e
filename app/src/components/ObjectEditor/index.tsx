@@ -5,14 +5,22 @@ import XyzInput from '../xyzInput';
 import PrimaryButton from '../PrimaryButton';
 import CancelButton from '../CancelButton';
 
-const ObjectEditor: React.FC = () => {
+const ObjectEditor = ({src, setSrc}) => {
 
   const geometryOptions = ['Plane', 'Cube', 'Sphere'];
   const materialOptions = ['MeshBasic','MeshLambert', 'MeshPhong'];
 
+  /**
+   * 仮でボタン押したらサーバーのAPI叩いて帰ってきたsrcをStoreにセットする
+   * 実稼働のときは、
+   *   ボタンクリック => 入力値をStoreに反映 => 反映済みのStoreをサーバーに投げる =>
+   *   パース(サーバー) => コード生成(サーバー) => フロントに返す =>
+   *   帰ってきたソースコードをdispatch => 描画を走らせる
+   */
   const fetchSrc = () => {
     fetch('/api/v1/get')
-      .then((res) => console.log(res))
+      .then(res => res.json())
+      .then(json => setSrc(json.src));
   };
 
   return(
