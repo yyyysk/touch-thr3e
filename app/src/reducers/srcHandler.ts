@@ -25,3 +25,5 @@ const srcHandler = (state = initialSrcState, action) => {
       return state;
   }
 };
+
+export default srcHandler;
