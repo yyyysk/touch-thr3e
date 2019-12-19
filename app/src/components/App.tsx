@@ -2,9 +2,9 @@ import * as React from 'react';
 
 import Header from '../containers/Header';
 import Modal from '../containers/Modal';
-import Sidebar from './Sidebar';
-import Screen from './Screen';
+import Screen from '../containers/Screen';
 
+import Sidebar from './Sidebar';
 
 const App = ({ modalOpenFlag }) => {
   
