@@ -19,7 +19,7 @@
     "typescript": "^3.7.2"
   },
   "scripts": {
-    "start": "ts-node server/src/bin/www.ts & webpack -w & yarn -s run gulp",
+    "start": "webpack -w & yarn -s run gulp & nodemon",
     "build": "webpack",
     "watch": "webpack -w",
     "test": "jest"

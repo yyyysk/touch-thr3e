@@ -60,7 +60,7 @@ class CodeGenerator implements CodeGenerator {
 
         // create a sphere
         var sphereGeometry = new THREE.SphereGeometry(4, 20, 20);
-        var sphereMaterial = new THREE.MeshBasicMaterial({color: 0x7777ff, wireframe: true});
+        var sphereMaterial = new THREE.MeshBasicMaterial({color: 0x347700, wireframe: true});
         var sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
 
         // position the sphere
