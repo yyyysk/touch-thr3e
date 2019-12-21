@@ -1,24 +1,32 @@
 import { connect } from 'react-redux';
 import ObjectEditor from '../components/ObjectEditor';
-import { setSrc } from '../actions/srcs';
+import { append, update, remove } from '../actions/objects';
 
 
 const mapStateToProps = (state) => {
+
   return {
-    src: state.srcHandler.src,
+    // objects: state.objectHandler.objects,
   };
-}
+};
 
 /**
  * @param dispatch 
  */
 const mapDispatchToProps = (dispatch) => {
+
   return {
-    setSrc(src) {
-      dispatch(setSrc(src));
+    append(data) {
+      dispatch(append(data));
+    },
+    update(data) {
+      dispatch(update(data));
+    },
+    remove(id) {
+      dispatch(remove(id));
     },
   };
-}
+};
 
 /**
  * コンポーネントとStoreを接続
