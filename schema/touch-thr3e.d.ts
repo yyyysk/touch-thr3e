@@ -1,7 +1,7 @@
 /**
  * Store
  */
-interface Store {
+export interface Store {
   modalOpenFlag: boolean;
   modalType: string;
 
@@ -9,9 +9,9 @@ interface Store {
 }
 
 /**
- * 
+ * Touch-thr3e Object
  */
-interface Touch3Object {
+export interface Touch3Object {
   id: number;
   geometry: string;
   material: string;
@@ -29,9 +29,9 @@ interface Touch3Object {
 }
 
 /**
- * 
+ * Touch-thr3e Light
  */
-interface Touch3Light {
+export interface Touch3Light {
   id: number;
   type: string;
   color: string;
@@ -49,9 +49,9 @@ interface Touch3Light {
 }
 
 /**
- * 
+ * Touch-thr3e Camera
  */
-interface Touch3Camera {
+export interface Touch3Camera {
   id: number;
   type: string;
   position: {

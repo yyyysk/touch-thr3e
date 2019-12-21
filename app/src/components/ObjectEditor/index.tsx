@@ -5,7 +5,12 @@ import XyzInput from '../xyzInput';
 import PrimaryButton from '../PrimaryButton';
 import CancelButton from '../CancelButton';
 
-const ObjectEditor = ({src, setSrc}) => {
+
+const ObjectEditor = ({ append, update, remove }) => {
+console.log(append)
+console.log(update);
+console.log(remove);
+
 
   const geometryOptions = ['Plane', 'Cube', 'Sphere'];
   const materialOptions = ['MeshBasic','MeshLambert', 'MeshPhong'];
@@ -17,11 +22,11 @@ const ObjectEditor = ({src, setSrc}) => {
    *   パース(サーバー) => コード生成(サーバー) => フロントに返す =>
    *   帰ってきたソースコードをdispatch => 描画を走らせる
    */
-  const fetchSrc = () => {
-    fetch('/api/v1/get')
-      .then(res => res.json())
-      .then(json => setSrc(json.src));
-  };
+  // const fetchSrc = () => {
+  //   fetch('/api/v1/get')
+  //     .then(res => res.json())
+  //     .then(json => setSrc(json.src));
+  // };
 
   return(
     <div className="objectEditor">
@@ -30,7 +35,7 @@ const ObjectEditor = ({src, setSrc}) => {
       <XyzInput label="Position" type="position" />
       <XyzInput label="Rotation" type="rotation" />
       <div className="objectEditor__actionWrapper">
-        <PrimaryButton label="Save" onClick={fetchSrc} />
+        <PrimaryButton label="Save" onClick={() => console.log('clicked save')} />
         <CancelButton label="Cancel" onClick={() => console.log('clicked cancel')} />
       </div>
     </div>
