@@ -5,12 +5,15 @@ import XyzInput from '../xyzInput';
 import PrimaryButton from '../PrimaryButton';
 
 interface props {
+  objectsLength;
   append;
   update;
   remove;
+  closeModal;
 };
 
 interface state {
+  id: number;
   geometry: string;
   material: string;
   size: {
@@ -35,10 +38,11 @@ class ObjectEditor extends React.Component<props, state> {
   geometryOptions = ['Plane', 'Cube', 'Sphere'];
   materialOptions = ['MeshBasic','MeshLambert', 'MeshPhong'];
 
-  constructor(props) {
+  constructor(props) {    
     super(props);
     // ユーザが入力した情報の一時保管用
     this.state = {
+      id: this.props.objectsLength + 1,
       geometry: '',
       material: '',
       size: {
@@ -84,12 +88,12 @@ class ObjectEditor extends React.Component<props, state> {
     this.setState(state);
   }
 
-  onSubmit() {
-    
+  onSave() {
+    this.props.append(this.state);
+    this.props.closeModal();
   }
 
   render() {
-
     return(
       <div className="objectEditor">
         <SelectBox label="Geometry" onChange={this.onSelectChange.bind(this)} options={this.geometryOptions} />
@@ -98,7 +102,7 @@ class ObjectEditor extends React.Component<props, state> {
         <XyzInput label="Position" onChange={this.onXYZChange.bind(this)} type="position" xValue={this.state.position.x} yValue={this.state.position.y} zValue={this.state.position.z} />
         <XyzInput label="Rotation" onChange={this.onXYZChange.bind(this)} type="rotation" xValue={this.state.rotation.x} yValue={this.state.rotation.y} zValue={this.state.rotation.z} />
         <div className="objectEditor__actionWrapper">
-          <PrimaryButton label="Save" onClick={() => console.log(this.props)} />
+          <PrimaryButton label="Save" onClick={() => this.onSave()} />
         </div>
       </div>
     );

@@ -1,12 +1,13 @@
 import { connect } from 'react-redux';
 import ObjectEditor from '../components/ObjectEditor';
 import { append, update, remove } from '../actions/objects';
+import { closeModal } from '../actions/modals';
 
 
 const mapStateToProps = (state) => {
 
   return {
-    // objects: state.objectHandler.objects,
+    objectsLength: state.objectHandler.objects.length,
   };
 };
 
@@ -24,6 +25,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     remove(id) {
       dispatch(remove(id));
+    },
+    closeModal() {
+      dispatch(closeModal());
     },
   };
 };
