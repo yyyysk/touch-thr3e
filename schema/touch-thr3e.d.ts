@@ -26,6 +26,11 @@ export interface Touch3Object {
     y: number;
     z: number;
   };
+  size: {
+    x: number;
+    y: number;
+    z: number;
+  };
 }
 
 /**
