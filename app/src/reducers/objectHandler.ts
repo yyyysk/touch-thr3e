@@ -18,6 +18,7 @@ const objectHandler = (state = initialModalState, action) => {
   switch (action.type) {
     // 新しくObjectを追加
     case actionTypes.APPEND_OBJECT:
+ 
       return {
         ...state,
         objects: addItem(state.objects, action.payload),

@@ -4,13 +4,15 @@ import SelectBox from '../SelectBox';
 import XyzInput from '../xyzInput';
 import PrimaryButton from '../PrimaryButton';
 import { postJSONtoServer } from '../../utils/serverClient';
+import { setSrc } from '../../actions/srcs';
 
 interface props {
-  objectsLength;
+  objects;
   append;
   update;
   remove;
   closeModal;
+  setSrc;
 };
 
 interface state {
@@ -44,7 +46,7 @@ class ObjectEditor extends React.Component<props, state> {
     super(props);
     // ユーザが入力した情報の一時保管用
     this.state = {
-      id: this.props.objectsLength + 1,
+      id: this.props.objects.length + 1,
       geometry: '',
       material: '',
       size: {
@@ -108,8 +110,8 @@ class ObjectEditor extends React.Component<props, state> {
      * パース(サーバー) => コード生成(サーバー) => フロントに返す =>
      * 帰ってきたソースコードをdispatch => 描画を走らせる
      */
-    postJSONtoServer('/api/v1/generate', this.state)
-      .then(json => console.log(json));
+    postJSONtoServer('/api/v1/generate', this.props.objects)
+      .then(json => this.props.setSrc(json['src']));
 
     this.props.closeModal();
   }
