@@ -3,8 +3,8 @@ const router = express.Router();
 
 const CodeGen = require('../generator/codeGenerator');
 
-router.get('/get', (req, res, next) => {
-  console.log('called get api');
+router.post('/generate', (req, res, next) => {
+  console.log('called generate api', req.body);
 
   const gen = new CodeGen();
   gen.init();

@@ -3,6 +3,7 @@ import * as React from 'react';
 import SelectBox from '../SelectBox';
 import XyzInput from '../xyzInput';
 import PrimaryButton from '../PrimaryButton';
+import { postJSONtoServer } from '../../utils/serverClient';
 
 interface props {
   objectsLength;
@@ -35,6 +36,7 @@ interface state {
 
 class ObjectEditor extends React.Component<props, state> {
 
+  isSubmitted = false;
   geometryOptions = ['Plane', 'Cube', 'Sphere'];
   materialOptions = ['MeshBasic','MeshLambert', 'MeshPhong'];
 
@@ -63,33 +65,52 @@ class ObjectEditor extends React.Component<props, state> {
     };
   }
 
+  
   /**
-   * 仮でボタン押したらサーバーのAPI叩いて帰ってきたsrcをStoreにセットする
-   * 実稼働のときは、
-   *   ボタンクリック => 入力値をStoreに反映 => 反映済みのStoreをサーバーに投げる =>
-   *   パース(サーバー) => コード生成(サーバー) => フロントに返す =>
-   *   帰ってきたソースコードをdispatch => 描画を走らせる
+   * selectBox変更時
+   * stateを更新
    */
-  // const fetchSrc = () => {
-  //   fetch('/api/v1/get')
-  //     .then(res => res.json())
-  //     .then(json => setSrc(json.src));
-  // };
-
   onSelectChange(e, key) {
     const data = {};
     data[key] = e.target.value;
     this.setState(data);
   }
 
+  /**
+   * x, y, zinputの変更時
+   * stateを更新
+   */
   onXYZChange(e, key, type) {
     const state = Object.assign({}, this.state);
     state[type][key] = e.target.value;
     this.setState(state);
   }
 
+  /**
+   * saveボタンクリック時
+   * isSubmittedフラグをtrueにして、StoreにStateを保存する
+   */
   onSave() {
+    this.isSubmitted = true;
     this.props.append(this.state);
+  }
+
+  /**
+   * ReduxのStoreが更新されたときに走る
+   */
+  componentDidUpdate() {
+    // Saveボタン押下時のみ処理を実行する
+    if (!this.isSubmitted) return;
+    /**
+     * saveボタン押したらサーバーのAPI叩いて帰ってきたsrcをStoreにセットする
+     * ボタンクリック=>入力値(state)をStoreに反映=>
+     * 反映済みのStoreをサーバーに投げる =>
+     * パース(サーバー) => コード生成(サーバー) => フロントに返す =>
+     * 帰ってきたソースコードをdispatch => 描画を走らせる
+     */
+    postJSONtoServer('/api/v1/generate', this.state)
+      .then(json => console.log(json));
+
     this.props.closeModal();
   }
 
