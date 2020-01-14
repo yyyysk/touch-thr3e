@@ -16,7 +16,6 @@ const srcHandler = (state = initialSrcState, action) => {
   switch (action.type) {
     // 変更済みソースコードをset
     case actionTypes.SET_SRC:
-      console.log(action.payload.src);
       return {
         ...state,
         src: action.payload.src,

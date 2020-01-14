@@ -10,17 +10,13 @@ class Screen extends React.Component<Props, {}> {
   constructor(props) {
     super(props);
   }
-
-  createSrcElm = () => {
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-
-    const src = document.createTextNode(this.props.src);
-    script.appendChild(src);
-  };
-
+  
+  /**
+   * srcがサーバーから渡ってきたときに実行
+   */
   UNSAFE_componentWillReceiveProps(nextProps) {
     console.log(nextProps.src, 'did')
+
     // ソースコード
     const src = document.createTextNode(nextProps.src);
 
@@ -35,6 +31,9 @@ class Screen extends React.Component<Props, {}> {
     renderer.appendChild(script);
   }
 
+  /**
+   * イルカ...
+   */
   componentWillUnmount() {
     var renderer = ReactDOM.findDOMNode(this.refs.renderer);
     renderer.removeChild(document.getElementById(`rendererSrc`));

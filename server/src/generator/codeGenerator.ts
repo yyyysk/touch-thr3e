@@ -76,16 +76,24 @@ class CodeGenerator implements CodeGenerator {
     // 共通の初期化処理を書き始める
     this._src += 'function init() {';
     this._src += `var webGLOutput = document.getElementById('WebGL-output');`;
+    // すでに存在するcanvasを削除して初期化
+    this._src += `while(webGLOutput.firstChild) {webGLOutput.removeChild(webGLOutput.firstChild);}`
     this._src += `var canvasWidth = webGLOutput.getBoundingClientRect().width;`;
+    //this._src += `var canvasWidth = webGLOutput.offsetWidth;`;
     this._src += `var canvasHeight = webGLOutput.getBoundingClientRect().height;`;
+    //this._src += `var canvasHeight = webGLOutput.offsetHeight;`;
     // シーンを作成
     this._src += `var scene = new THREE.Scene();`;
+
+    // レンダラを作成
+    this._src += `var renderer = new THREE.WebGLRenderer({webGLOutput});`;
+    this._src += `renderer.setClearColor(new THREE.Color(0xEEEEEE));`;
+    this._src += `renderer.setPixelRatio(window.devicePixelRatio);`;
+    this._src += `renderer.setSize(canvasWidth, canvasHeight);`;
+    // this._src += `var canvasWidth = renderer.domElement.getBoundingClientRect().width`;
+    // this._src += `var canvasHeight = renderer.domElement.getBoundingClientRect().height`;
     // カメラを作成
     this._src += `var camera = new THREE.PerspectiveCamera(45, canvasWidth / canvasHeight, 0.1, 1000);`;
-    // レンダラを作成
-    this._src += `var renderer = new THREE.WebGLRenderer();`;
-    this._src += `renderer.setClearColor(new THREE.Color(0xEEEEEE));`;
-    this._src += `renderer.setSize(canvasWidth, canvasHeight);`;
   }
 
   /**
@@ -93,13 +101,13 @@ class CodeGenerator implements CodeGenerator {
    */
   finishInitWriting() {
     // カメラ調整
-    this._src += `camera.position.x = -30;`;
-    this._src += `camera.position.y = 40;`;
-    this._src += `camera.position.z = 30;`;
+    this._src += `camera.position.x = 0;`;
+    this._src += `camera.position.y = 0;`;
+    this._src += `camera.position.z = 100;`;
     this._src += `camera.lookAt(scene.position);`;
     this._src += `camera.aspect = canvasWidth / canvasHeight;`;
     this._src += `camera.updateProjectionMatrix();`;
-    // DOM取得
+    // canvasを追加
     this._src += `document.getElementById("WebGL-output").appendChild(renderer.domElement);`; 
     // レンダー
     this._src += `renderer.render(scene, camera);`;
